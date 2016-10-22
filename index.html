@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="js/fontsize.js"></script>
+	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<link rel="stylesheet" href="animation/animate.css">
+	<title>做我女朋友吧</title>
+	<style>
+		html,body,h3,p,ul,li{margin: 0;padding: 0;}
+		li{display: none;}
+		a{text-decoration: none;}
+		html{font-size: 50px;}
+		body{position: absolute;width: 100%;height: 100%;overflow: hidden;}
+		.swiper-container{width: 100%;height: 100%;overflow: hidden;}
+		.swiper-slide{width: 100%;height: 100%;}
+		.page1{position:relative; background: url(images/c.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%}
+		.page1-1{position: absolute;left: 0;top: 0;width: 100%;height: 50%;background:url(images/f.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;}
+		.page1-2{position: absolute;left: 0;top: 5.6rem;width: 100%;height: 6.5rem;background-color: #000; font-size: 0.5rem;color:pink;text-align: center;}
+		.page2{position:relative; background: url(images/d.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%}
+		.page2-1{position: absolute;left: 0;top: 0rem;width: 100%;height: 2.17rem;}
+		 .page2 .page2-2{position: absolute;left: 0.15rem;top: 2.17rem;width: 6.12rem;height: 3.7rem;}
+		.page2 img{width: 100%;}
+		.page2 h3{padding-top:0.5rem ;padding-left:0.8rem;font-family: "微软雅黑";font-size: 0.3rem;color: #0f1834;}	
+		.page2 p{padding-top:0.2rem;padding-left:1rem;font-family: "微软雅黑";font-size: 0.4rem;color: lightslategrey;;font-weight: 700;}
+		.page3{position:relative;background: url(images/h.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;opacity: 0.7}
+		.page3 img{    position: absolute;left: 0;top: 0;}
+		.page3-1{width: 100%;height: 6.19rem;background:url(images/s.jpg) no-repeat ;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;opacity: 0.7}
+		.page3-2{position:absolute;;left: 0;top:6.2rem;width: 100%;height: 2rem;background: url(images/1.png) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%;opacity: 0.5}	
+		.page3	p{text-align: center;font-family: "微软雅黑";font-size: 0.6rem;color: sienna;font-weight: 500;letter-spacing: 0.1rem;}
+		.page3	span{display:block;text-align: center}
+		.page4{overflow: hidden;background: url(images/z.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%}
+		.page4-1{height: 4.96rem;width: 100%;margin:0.15rem;}
+		.page4 .pic{float: left;width: 1.99rem;height: 4.66rem;padding-left: 0.05rem;}
+		.picF{padding-left: 0;}
+		.page4	p{padding-top:0.5rem;text-align: center;font-family: "微软雅黑";font-size: 0.32rem;color: #453737;font-weight: 600;}
+		.page4 span{display:block;word-wrap:break-word;text-transform: uppercase;font-size: 0.18rem;letter-spacing: 0.05rem;padding-top:0.2rem;}
+		.page4 .ps{padding-top:0.3rem;font-size: 0.24rem;color: #0b2a4a;}
+		.page5{position:relative;background: url(images/o.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%}
+		.page5-1{width: 6.12rem;height: 4.61rem;margin: 0.15rem;background:url(images/u.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%; opacity: 0.5 }
+		
+		.page5	h3{padding-top:0.6rem;text-align: center;font-family: "微软雅黑";font-size: 0.34rem;color:#453737;font-weight: 500;}
+		.page5	p{padding-left:2rem;text-align: left;font-family: "微软雅黑";font-size: 0.32rem;color: #453737;font-weight: 500;padding-top: 0.1rem}
+		.page5 span{display:block;word-wrap:break-word;padding: 0.1rem 0.2rem;}
+		.page6{position:relative;background: url(images/1.jpg) no-repeat;-webkit-background-size: 100% 100%;
+		background-size: 100% 100%}
+		.girl{padding-left:1rem;font-family: "微软雅黑";font-size: 0.6rem;color: thistle;;font-weight: 500;line-height: 1.5rem;word-wrap:break-word;text-transform: uppercase;letter-spacing: 0.05rem;}
+		.girl p{font-size: 0.3rem}
+		.page6-4{width: 5.6rem;height: 2rem;margin:0 auto;padding-top:2.5rem;text-align: justify;font-family: "微软雅黑";font-size: 0.26rem;color: thistle;;font-weight: 500;line-height: 0.5rem;}
+		.page6-4 span{float: right;word-wrap:break-word;}
+		.btn{display: block;position: fixed;right: 20px;top:20px; width: 44px;height: 44px;background: url(images/music.png) no-repeat;z-index: 100;
+		transform:rotate(0);
+		-webkit-transform:rotate(0);
+		}
+	.srrow{position: absolute;left: 40%;bottom: 5px;width: 20%;z-index: 100;}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<span class="btn name time linear infinite"></span>
+			<div class="srrow arrow-name linear infinite time"><img src="images/arrow.png" width="100%"alt=""></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide page1">
+			<div class="page1-1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="5s" swiper-animate-delay="1s"></div>
+			<div class="page1-2 ani"swiper-animate-effect="fadeInDown" swiper-animate-duration="5s" swiper-animate-delay="1s">
+				<p>不管对错，在这美丽的一天，我想说对不起。如果我们在茫茫人海中的相识是上天安排的缘份，就让我们从头来过。我可以确定，从现在未来，你是我唯一的爱。</p>
+			</div>
+
+        </div>
+
+        <div class="swiper-slide page2">
+			<div class="page2-1"></div>
+
+			<div class="page2-2 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="5s" swiper-animate-delay="0.3s">
+			
+			<h3 class="ani"swiper-animate-effect="fadeInDown" swiper-animate-duration="2.5s" swiper-animate-delay="0.3s">对不起，大概我真的不懂爱情，只知道一味的等待和逃避；有时候，不是不明白你说的意思，只是我的心一直纠结犹豫，其实好多话当时说出来的时候都是认真的，只不过最终我还是选择了逃避。说实话，关于感情，我一向很少去触碰，我不知道什么是喜欢，也不知道喜欢一个人是什么感觉.<br>晚上我认真的思考了一下，发现我有时候真的很在意你的想法，遇到不开心事也会找你倾诉，喜欢跟你聊天，我也分不清这到底是依赖还是喜欢，大概含有喜欢的成分吧；我也知道自己挺混蛋的，一直犹犹豫豫。</h3>
+			<p>Courage to make my decision not to run away</p>
+			</div>
+        </div>
+
+        <div class="swiper-slide page3">
+		  	<div class="page3-1 ani" swiper-animate-effect="fadeOut" swiper-animate-duration="10s" swiper-animate-delay="0.3s" ></div>
+		  	<img class="page3-1 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="10s" swiper-animate-delay="6s" src="images/3-1.jpg" alt="">
+		  	<div class="page3-2 ani" swiper-animate-effect="flipOutY" swiper-animate-duration="5s" swiper-animate-delay="0.3s"></div>
+		  	<p class="ani" swiper-animate-effect="flash" swiper-animate-duration="5s" swiper-animate-delay="1s"><span>Cherish ，<br></span>爱要大声说出来</p>
+		 </div>
+
+		  <div class="swiper-slide page4">
+			  	<div class="page4-1">
+			  	<img class="pic picF ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="5s" swiper-animate-delay="0.3s" src="images/4-2.jpg" alt="">
+			  	<img class="pic ani" swiper-animate-effect="zoomIn" swiper-animate-duration="5s" swiper-animate-delay="0.3s" src="images/4-1.jpg" alt="">
+			  	<img class="pic ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="5s" swiper-animate-delay="0.3s" src="images/4-3.jpg" alt="">
+				</div>
+				<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="4s" swiper-animate-delay="2s">[Londing......] <span> Follow My Heart</span></p>
+				<p class="ps ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="4s" swiper-animate-delay="4s">Listening to my heart beating.<br>From now on, please be my girlfriend </p>
+		 </div>
+
+		  <div class="swiper-slide page5">
+		  	<div class="page5-1 ani" swiper-animate-effect="fadeOut" swiper-animate-duration="5s" swiper-animate-delay="0.3s"></div>
+		  	<div class="page5-2"></div>
+		  	<h3 class="ani" swiper-animate-effect="swing" swiper-animate-duration="7s" swiper-animate-delay="0.2s"> Waiting For You......</h3>
+		  	<p class="ani" swiper-animate-effect="swing" swiper-animate-duration="8s" swiper-animate-delay="1.3s">  -也许是我不懂的事太多， <span class="ani" swiper-animate-effect="swing" swiper-animate-duration="9s" swiper-animate-delay="3.4s">也许一切已经慢慢的错过。</span>-可我依然期待你的谅解，<span class="ani" swiper-animate-effect="swing" swiper-animate-duration="10s" swiper-animate-delay="4s"> 坦诚面对勇敢担当</span></p>
+		 </div>
+
+		  <div class="swiper-slide page6">
+		  	<div class="girl ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="15s" swiper-animate-delay="0.1s">做我女朋友吧！<p>Do my girlfriend</p></div>
+		  	<div class="page6-4">
+		  	<p class="ani" swiper-animate-effect="flip" swiper-animate-duration="5s" swiper-animate-delay="10s">一生中至少该有一次,<br>为了某个人而忘记自己，<br>不求有结果，<br>不求曾经拥有，<br>甚至不求你爱我，<br>只求在我最美的年华里，<br>遇到你</p>
+		  	
+			<span>——徐志摩</span>
+		  </div>
+		 </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+   
+</div>
+<audio id="music2" src="source/M2M - The Day You Went Away - 单曲版.mp3" autoplay></audio>
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script src="js/touch-0.2.14.min.js"></script>	
+<script>
+	var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',
+    // loop: true,
+    
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+	 onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+	 swiperAnimateCache(swiper); //隐藏动画元素 
+	 swiperAnimate(swiper); //初始化完成开始动画
+	 }, 
+	 onSlideChangeEnd: function(swiper){ 
+	 swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+	  } 
+  })   
+  $(document).ready(function(){
+		var MUSIC = document.getElementById('music2')
+		var sbtn = true;
+
+		touch.on('.btn','tap',function(e){
+		
+			if(sbtn == true){
+			$('.btn').removeClass('name')
+				MUSIC.pause();
+			 sbtn = false;
+			
+		}
+		else {
+			$('.btn').addClass('name')
+			MUSIC.play();
+			sbtn = true;
+		}
+		//console.log(sbtn)
+		})
+		
+		})            
+</script>
+</body>
+</html>
